@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llBg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/player_red_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".FourInARowActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/boardWithMove"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="30dp"
+        android:orientation="vertical"
+
+        app:layout_constraintDimensionRatio="7:7"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:id="@+id/llNextMove"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="7:1"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/ivNextMove"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:src="@drawable/fourinarow_redcircle"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/board"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:background="@drawable/fourinarow_board"
+
+            app:layout_constraintDimensionRatio="7:6"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/llNextMove">
+            <LinearLayout
+                android:id="@+id/llColumn1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:clickable="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/btnCell11"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell21"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell31"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell41"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell51"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/btnCell61"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llColumn2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:clickable="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/btnCell12"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell22"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell32"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell42"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell52"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell62"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llColumn3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:clickable="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/btnCell13"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell23"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell33"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell43"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell53"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell63"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llColumn4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:clickable="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/btnCell14"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell24"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell34"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell44"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell54"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell64"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llColumn5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:clickable="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/btnCell15"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell25"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell35"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell45"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell55"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell65"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llColumn6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:clickable="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/btnCell16"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell26"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell36"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell46"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell56"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell66"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llColumn7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:clickable="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/btnCell17"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell27"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell37"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell47"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell57"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/btnCell67"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fourinarow_emptycircle">
+
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/btnRestartGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/bebas_neue_bold"
+        android:text="RESTART"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="80px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/boardWithMove"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

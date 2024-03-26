@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Micro Games"
+        android:textSize="35dp"
+        android:fontFamily="@font/bebas_neue_bold"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:background="@color/player_none"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/btnFourInARow"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="16:9">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:padding="20dp"
+                    android:textSize="40dp"
+                    android:background="@drawable/gamelist_gametitle_bg_fourinarow"
+                    android:fontFamily="@font/bebas_neue_bold"
+                    android:textColor="@color/grey"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnSlidingPuzzle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                app:layout_constraintTop_toBottomOf="@id/btnFourInARow"
+                app:layout_constraintDimensionRatio="16:9">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:padding="20dp"
+                    android:textSize="40dp"
+                    android:background="@drawable/gamelist_gametitle_bg_slidingpuzzle"
+                    android:fontFamily="@font/bebas_neue_bold"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/btnExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Exit"
+        android:textSize="30dp"
+        android:fontFamily="@font/bebas_neue_bold"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:background="@color/player_none"/>
+
+</LinearLayout>

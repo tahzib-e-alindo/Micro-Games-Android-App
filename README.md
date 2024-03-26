@@ -1,0 +1,2 @@
+# Micro-Games-Android-App
+Project of CSE489: Mobile Application Development. An android application with two mini games: Four In a Row and Sliding Puzzle. Created using basic android layouts and components.

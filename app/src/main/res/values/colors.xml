@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="grey">#3A3A3A</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="player_red">#ff5e56</color>
+    <color name="player_red_bg">#EA8A85</color>
+    <color name="player_red_bg_semi_transparent">#66EA8A85</color>
+    <color name="player_blue">#01c1f0</color>
+    <color name="player_blue_bg">#77D6ED</color>
+    <color name="player_blue_bg_semi_transparent">#6677D6ED</color>
+    <color name="player_none">#545d64</color>
+    <color name="player_none_bg_semi_transparent">#66545d64</color>
+
+    <color name="slidingpuzzle_bg_color">#325771</color>
+    <color name="slidingpuzzle_board_color">#293334</color>
+</resources>

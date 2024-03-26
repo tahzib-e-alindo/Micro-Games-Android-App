@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="grey"></attr>
+    <attr name="player_red"></attr>
+    <attr name="player_red_bg"></attr>
+    <attr name="player_red_bg_semi_transparent"></attr>
+    <attr name="player_blue"></attr>
+    <attr name="player_blue_bg"></attr>
+    <attr name="player_blue_bg_semi_transparent"></attr>
+    <attr name="player_none"></attr>
+    <attr name="player_none_bg_semi_transparent"></attr>
+
+    <attr name="slidingpuzzle_bg_color"></attr>
+    <attr name="slidingpuzzle_board_color"></attr>
+</resources>

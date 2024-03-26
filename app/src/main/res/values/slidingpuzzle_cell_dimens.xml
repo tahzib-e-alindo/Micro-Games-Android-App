@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="slidingpuzzle_cell_rc_radius">4dp</dimen>
+    <dimen name="slidingpuzzle_cell_stroke_width">4dp</dimen>
+    <dimen name="slidingpuzzle_cell_stroke_padding">3dp</dimen>
+    <dimen name="slidingpuzzle_cell_margin_easy">3dp</dimen>
+    <dimen name="slidingpuzzle_cell_margin_medium">2dp</dimen>
+    <dimen name="slidingpuzzle_cell_margin_hard">1dp</dimen>
+</resources>
